@@ -71,10 +71,10 @@ public class Track
      */
     public String getDetails()
     {
-        return artist + ": " + title + "  (file: " + filename + ")";
+        return artist + ": " + title + "  (file: " + filename + ") - Reproducciones: " + playCount;
     }
     
-    public void getPlayCount()
+    public void incrementPlayCount()
     {
         playCount++;
     }
