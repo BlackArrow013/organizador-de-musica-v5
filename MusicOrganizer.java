@@ -248,4 +248,19 @@ public class MusicOrganizer
             }
         }
     }
+    
+    /**
+     * Permite eliminar de la lista de tracks los que contengan el título determinado en el parámetro del método.
+     */
+    public void removeByTitle(String title)
+    {
+        Iterator<Track> it = tracks.iterator();
+        while(it.hasNext()) {
+            Track ite = it.next();
+            String delete = ite.getTitle();
+            if(delete.contains(title)) {
+                it.remove();
+            }
+        }
+    }
 }
