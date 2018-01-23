@@ -186,4 +186,14 @@ public class MusicOrganizer
             }
         }
     }
+    
+    /** 
+     * Permite especificar el género de un archivo.
+     */
+    public void setType(int index, String type)
+    {
+        if(index >= 0 && index < tracks.size()) {
+            tracks.get(index).setType(type);
+        }
+    }
 }

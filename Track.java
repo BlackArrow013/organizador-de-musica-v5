@@ -13,7 +13,9 @@ public class Track
     private String title;
     // Where the track is stored.
     private String filename;
-    private int playCount;    
+    private int playCount;
+    // Tipo de género al que pertenece.
+    private String type;
     /**
      * Constructor for objects of class Track.
      * @param artist The track's artist.
@@ -24,6 +26,7 @@ public class Track
     {
         setDetails(artist, title, filename);
         playCount = 0;
+        type = "Unknown";
     }
     
     /**
@@ -36,6 +39,7 @@ public class Track
     {
         setDetails("unknown", "unknown", filename);
         playCount = 0;
+        type = "Unknown";
     }
     
     /**
@@ -71,7 +75,7 @@ public class Track
      */
     public String getDetails()
     {
-        return artist + ": " + title + "  (file: " + filename + ") - Reproducciones: " + playCount;
+        return artist + ": " + title + "  (file: " + filename + "); género: " + type + " - Reproducciones: " + playCount;
     }
     
     public void incrementPlayCount()
@@ -97,4 +101,19 @@ public class Track
         this.filename = filename;
     }
     
+    /**
+     * Devuelve el tipo de género.
+     */
+    public String getType()
+    {
+        return type;
+    }
+    
+    /**
+     * Permite cambiar el género del archivo.
+     */
+    public void setType(String type)
+    {
+        this.type = type;
+    }
 }
